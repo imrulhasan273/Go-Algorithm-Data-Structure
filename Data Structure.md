@@ -34,21 +34,22 @@ In other languages like Javascript value of an uninitialized variable is undefin
 
 ```go
 func main() {
-	// Fixed Length = Array
+	// ############ INTEGER
 	var v_int_arr [5]int 	
 	fmt.Println(v_int_arr)
 
-	// Fixed Length = Array
+	// ############ STRING
 	var v_str_arr [10]string	
 	fmt.Println(v_str_arr)
 
+	// ############ 2D INTEGER
 	var v_2d_arr [3][5]int
 	fmt.Println(v_2d_arr)
 }
 ```
 
 **Output**
-![alt text](image-3.png)
+![alt text](image-1.png)
 
 ---
 
@@ -56,33 +57,45 @@ func main() {
 
 ```go
 func main() {
-	// Fixed Length = Array
-	var v_int_arr [5]int 	
-	fmt.Println(v_int_arr)
+	// ############ INTEGER
+    var v_int_init = [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+    fmt.Println(v_int_init)
 
-	// Fixed Length = Array
-	var v_str_arr [10]string	
-	fmt.Println(v_str_arr)
-
-	var v_2d_arr [3][5]int
-	fmt.Println(v_2d_arr)
-
-	// Fixed Length = Array
-	var v_2d_arr_init = [3][5]int {}
-	fmt.Println(v_2d_arr_init)
-
-	// Fixed Length = Array
+	// ############ 2D INTEGER
 	var v_2d_arr_init_assigned = [3][5]int {	
 		{1, 2, 3, 4, 5},
 		{6, 7, 8, 9, 10},
 		{11, 12, 13, 13, 15},
 	}
 	fmt.Println(v_2d_arr_init_assigned)
+
+	// ############ STRING
+	var v_str_init = [10]string{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"}
+	fmt.Println(v_str_init) 
+
+	// ############ ARRAY OF STRUCT
+	type Car struct {
+		Brand string
+		Color string
+		Price float32
+	}
+	// Array of 5 items of type Car
+	var v_struct_items = [5]Car {
+		{Brand: "Porsche", Color: "Black", Price: 20000.00},
+		{Brand: "Volvo", Color: "White", Price: 8000.00},
+		{Brand: "Honda", Color: "Blue", Price: 7000.00},
+		{Brand: "Tesla", Color: "Black", Price: 50000.00},
+		{Brand: "Kia", Color: "Red", Price: 5000.98},
+	}
+	fmt.Println(v_struct_items)
 }
 ```
 
 **Output**
+![alt text](image.png)
 
 ---
+
+
 
 
