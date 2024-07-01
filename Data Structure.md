@@ -30,7 +30,29 @@ In other languages like Javascript value of an uninitialized variable is undefin
 
 ---
 
-### Declaring and Initializing Arrays
+### Declaring Arrays
+
+```go
+func main() {
+	// Fixed Length = Array
+	var v_int_arr [5]int 	
+	fmt.Println(v_int_arr)
+
+	// Fixed Length = Array
+	var v_str_arr [10]string	
+	fmt.Println(v_str_arr)
+
+	var v_2d_arr [3][5]int
+	fmt.Println(v_2d_arr)
+}
+```
+
+**Output**
+![alt text](image-3.png)
+
+---
+
+### Initializing Arrays
 
 ```go
 func main() {
@@ -60,7 +82,6 @@ func main() {
 ```
 
 **Output**
-![alt text](image-2.png)
 
 ---
 
